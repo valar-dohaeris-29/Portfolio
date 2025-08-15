@@ -383,8 +383,11 @@ function initTypingEffect() {
 
 // Initialize EmailJS
 (function() {
+    // Check if config is loaded, fallback to placeholder if not
+    const publicKey = (typeof EMAILJS_CONFIG !== 'undefined') ? EMAILJS_CONFIG.PUBLIC_KEY : "YOUR_PUBLIC_KEY";
+    
     emailjs.init({
-        publicKey: "YOUR_PUBLIC_KEY", // Replace with your EmailJS public key
+        publicKey: publicKey
     });
 })();
 
@@ -413,13 +416,25 @@ function initContactForm() {
                 return;
             }
             
-            // Prepare email parameters
+            // Prepare email parameters with timestamp
+            const now = new Date();
+            const timeString = now.toLocaleString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                timeZoneName: 'short'
+            });
+            
             const templateParams = {
-                from_name: name,
-                from_email: email,
+                name: name,
+                email: email,
                 subject: subject,
                 message: message,
-                to_email: 'montie2206@gmail.com'
+                time: timeString,
+                to_email: (typeof EMAILJS_CONFIG !== 'undefined') ? EMAILJS_CONFIG.TO_EMAIL : 'montie2206@gmail.com'
             };
             
             const submitButton = this.querySelector('button[type="submit"]');
@@ -429,7 +444,11 @@ function initContactForm() {
             submitButton.disabled = true;
             
             // Send email using EmailJS
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+            // Get service and template IDs from config
+            const serviceId = (typeof EMAILJS_CONFIG !== 'undefined') ? EMAILJS_CONFIG.SERVICE_ID : 'YOUR_SERVICE_ID';
+            const templateId = (typeof EMAILJS_CONFIG !== 'undefined') ? EMAILJS_CONFIG.TEMPLATE_ID : 'YOUR_TEMPLATE_ID';
+            
+            emailjs.send(serviceId, templateId, templateParams)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
