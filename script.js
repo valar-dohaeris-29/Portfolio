@@ -265,7 +265,7 @@ function initScrollAnimations() {
     }, observerOptions);
     
     // Observe elements for fade-in animation
-    const animatedElements = document.querySelectorAll('.timeline-item, .skill-category, .education-item, .cert-item, .stat, .info-item');
+    const animatedElements = document.querySelectorAll('.timeline-item, .skill-category, .career-item, .cert-item, .stat, .info-item');
     animatedElements.forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
@@ -293,37 +293,46 @@ function initSkillBars() {
     function animateSkillBars() {
         // Define skill levels (you can modify these based on actual skills)
         const skillLevels = {
-            'JavaScript': 90,
-            'Python': 85,
-            'React': 88,
-            'Node.js': 82,
-            'HTML/CSS': 95,
-            'SQL': 80,
-            'Git': 85,
-            'AWS': 75,
-            'Docker': 70,
-            'MongoDB': 78,
-            'Express.js': 85,
-            'Vue.js': 75,
-            'TypeScript': 80,
-            'PHP': 70,
-            'Laravel': 68,
-            'MySQL': 82,
-            'PostgreSQL': 75,
-            'Redis': 65,
-            'GraphQL': 70,
-            'REST APIs': 88
+            'TypeScript': 100,
+            'JavaScript': 100,
+            'HTML, CSS, SCSS': 100,
+            'Vue.js': 100,
+            'Vuetify': 100,
+            'jQuery': 100,
+            'Angular': 80,
+            'Bootstrap': 80,
+            'React': 60,
+            'React Native': 60,
+
+            'Python': 100,
+            'C#': 100,
+            '.NET Core': 100,
+            'gRPC': 100,
+            'FastAPI': 80,
+            'Node.js': 80,
+            'VB.Net': 80,
+            'Java': 40,
+            'C++': 40,
+
+            'SQL Server, MySQL, PostgreSQL': 100,
+            'Entity Framework & LINQ': 100,
+            'SQLAlchemy & Alembic': 100,
+            'Git & GitLab': 100,
+            'Jira': 100,
+            'JSON': 100,
+            'Supabase': 80,
+            'Microsoft Azure': 80,
         };
         
         skillBars.forEach(bar => {
             const skillName = bar.closest('.skill-item').querySelector('.skill-name').textContent;
-            const level = skillLevels[skillName] || 75; // Default to 75% if not found
+            const level = skillLevels[skillName] || 0; // Default to 0% if not found
             
             // Update the skill level text
-            const skillLevelElement = bar.closest('.skill-item').querySelector('.skill-level');
-            if (skillLevelElement) {
-                skillLevelElement.textContent = `${level}%`;
-            }
+            // const skillLevelElement = bar.closest('.skill-item').querySelector('.skill-level');
+            // if (skillLevelElement) {
+            //     skillLevelElement.textContent = `${level}%`;
+            // }
             
             // Animate the progress bar
             setTimeout(() => {
@@ -434,7 +443,7 @@ function initContactForm() {
                 subject: subject,
                 message: message,
                 time: timeString,
-                to_email: (typeof EMAILJS_CONFIG !== 'undefined') ? EMAILJS_CONFIG.TO_EMAIL : 'montie2206@gmail.com'
+                to_email: (typeof EMAILJS_CONFIG !== 'undefined') ? EMAILJS_CONFIG.TO_EMAIL : 'deuel.ellan@gmail.com'
             };
             
             const submitButton = this.querySelector('button[type="submit"]');
@@ -603,7 +612,7 @@ style.textContent = `
 document.head.appendChild(style);
 
 // Console welcome message
-console.log('%c👋 Welcome to Montie\'s Portfolio!', 'color: #2563eb; font-size: 16px; font-weight: bold;');
+console.log('%c👋 Welcome to Deuel\'s Portfolio!', 'color: #2563eb; font-size: 16px; font-weight: bold;');
 console.log('%cInterested in the code? Check out the repository!', 'color: #64748b; font-size: 14px;');
 
 // Add some interactive Easter eggs
