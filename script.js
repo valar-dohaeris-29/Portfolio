@@ -285,7 +285,7 @@ function initSkillBars() {
                     skillsObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.5 });
+        }, { threshold: 0.1 });
         
         skillsObserver.observe(skillsSection);
     }
@@ -335,7 +335,8 @@ function initSkillBars() {
             // }
             
             // Animate the progress bar
-            setTimeout(() => {
+            setTimeout(() => {                
+                bar.offsetWidth; // force reflow for Safari
                 bar.style.width = `${level}%`;
             }, Math.random() * 500); // Stagger the animations
         });
