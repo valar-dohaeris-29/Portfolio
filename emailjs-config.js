@@ -12,7 +12,7 @@ const EMAILJS_CONFIG = {
     TEMPLATE_ID: "template_6llsbdu",
     
     // Your email address where messages will be sent
-    TO_EMAIL: "deuel.ellan@gmail.com"
+    TO_EMAIL: "montie2206@gmail.com"
 };
 
 // Export for use in main script

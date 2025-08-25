@@ -597,14 +597,14 @@ section {
     font-family: 'Fira Code', monospace;
 }
 
-/* Projects Section */
-.projects-section {
+/* Experience Section */
+.experience {
     background: linear-gradient(135deg, #1a1a1a 0%, #0d1117 100%);
     position: relative;
 }
 
-.projects-section::before {
-    content: 'const projects = [';
+.experience::before {
+    content: 'const experience = [';
     position: absolute;
     top: 10%;
     left: 5%;
@@ -614,7 +614,7 @@ section {
     pointer-events: none;
 }
 
-.projects-section::after {
+.experience::after {
     content: '];';
     position: absolute;
     bottom: 10%;
@@ -925,14 +925,14 @@ section {
     100% { transform: translateX(100%); }
 }
 
-/* Career Section */
-.career {
+/* Education Section */
+.education {
     background: linear-gradient(135deg, #1a1a1a 0%, #0d1117 100%);
     position: relative;
 }
 
-.career::before {
-    content: 'class Career { constructor() { this.knowledge = "unlimited"; } }';
+.education::before {
+    content: 'class Education { constructor() { this.knowledge = "unlimited"; } }';
     position: absolute;
     top: 10%;
     left: 5%;
@@ -943,14 +943,14 @@ section {
     transform: rotate(-10deg);
 }
 
-.career-grid {
+.education-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
     margin-bottom: 4rem;
 }
 
-.career-item {
+.education-item {
     display: flex;
     gap: 1.5rem;
     padding: 2rem;
@@ -962,13 +962,13 @@ section {
     backdrop-filter: blur(10px);
 }
 
-.career-item:hover {
+.education-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 40px rgba(0, 255, 65, 0.2);
     border-color: #00ff41;
 }
 
-.career-icon {
+.education-icon {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -984,7 +984,7 @@ section {
     box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
 }
 
-.career-content h3 {
+.education-content h3 {
     font-size: 1.2rem;
     font-weight: 600;
     color: #00ff41;
@@ -993,14 +993,14 @@ section {
     text-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
 }
 
-.career-content h4 {
+.education-content h4 {
     color: #8cc8ff;
     font-weight: 600;
     margin-bottom: 0.5rem;
     font-family: 'Fira Code', monospace;
 }
 
-.career-year {
+.education-year {
     background: rgba(0, 255, 65, 0.1);
     color: #00ff41;
     border: 1px solid rgba(0, 255, 65, 0.3);
@@ -1014,7 +1014,7 @@ section {
     box-shadow: 0 0 5px rgba(0, 255, 65, 0.2);
 }
 
-.career-content p {
+.education-content p {
     color: #c9d1d9;
     line-height: 1.6;
     font-family: 'Fira Code', monospace;
@@ -1469,7 +1469,7 @@ section {
         grid-template-columns: 1fr;
     }
 
-    .career-grid {
+    .education-grid {
         grid-template-columns: 1fr;
     }
 

@@ -101,7 +101,7 @@ The cyberpunk template uses the following variables that are automatically popul
 - `{{subject}}` - Message subject
 - `{{message}}` - Message content
 - `{{time}}` - Timestamp when the message was sent
-- `{{to_email}}` - Your email address (your_email@gmail.com)
+- `{{to_email}}` - Your email address (montie2206@gmail.com)
 
 ## Testing
 

@@ -40,7 +40,7 @@ const EMAILJS_CONFIG = {
     TEMPLATE_ID: "your_template_id_here",
     
     // Your email address where messages will be sent
-    TO_EMAIL: "your_email@gmail.com"
+    TO_EMAIL: "montie2206@gmail.com"
 };
 ```
 
