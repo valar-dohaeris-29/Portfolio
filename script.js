@@ -317,6 +317,7 @@ function initSkillBars() {
             'SQL Server, MySQL, PostgreSQL': 100,
             'Entity Framework & LINQ': 100,
             'SQLAlchemy & Alembic': 100,
+            'Unit Tests': 100,
             'Git & GitLab': 100,
             'Jira': 100,
             'JSON': 100,
@@ -328,7 +329,7 @@ function initSkillBars() {
             const skillName = bar.closest('.skill-item').querySelector('.skill-name').textContent;
             const level = skillLevels[skillName] || 0; // Default to 0% if not found
             
-            // Update the skill level text
+            // // Update the skill level text
             // const skillLevelElement = bar.closest('.skill-item').querySelector('.skill-level');
             // if (skillLevelElement) {
             //     skillLevelElement.textContent = `${level}%`;

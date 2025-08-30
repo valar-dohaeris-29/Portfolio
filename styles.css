@@ -719,11 +719,16 @@ section {
     font-weight: 600;
     margin-bottom: 1.5rem;
     font-family: 'Fira Code', monospace;
+    text-decoration: none;
 }
 
 .company::before {
     content: '@ ';
     color: #00ff41;
+}
+
+.company:hover {
+    text-decoration: underline;
 }
 
 .projects {
