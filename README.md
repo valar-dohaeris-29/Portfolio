@@ -1,1 +1,5 @@
-
+👋 Hi, I’m Deuel
+👀 I’m interested in Art
+🌱 I’m currently learning as much as I can
+📫 How to reach me: deuel.ellan@gmail.com
+📕 "Champions arise from the ashes of brutality"
